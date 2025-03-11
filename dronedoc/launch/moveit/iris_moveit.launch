@@ -2,7 +2,7 @@
 
     <!-- robot description for px4 sitl -->
     <arg name="model_sitl" default="$(find dronedoc)/models/iris_depth_camera/xacro_sitl/urdf/iris_base.xacro" />
-    <arg name="mavlink_udp_port" default="14560"/>
+    <arg name="mavlink_udp_port" default="14540"/>
     <arg name="rotors_description_dir_sitl" default="$(find dronedoc)/models/iris_depth_camera/xacro_sitl" />
     <arg name="cmd_sitl" default="$(find xacro)/xacro $(arg model_sitl) rotors_description_dir:=$(arg rotors_description_dir_sitl) mavlink_udp_port:=$(arg mavlink_udp_port) --inorder"/>
     <param command="$(arg cmd_sitl)" name="robot_description_sitl" />
@@ -14,21 +14,23 @@
     <param command="$(arg cmd)" name="robot_description" />
 
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
-    <!-- PX4 configs -->
+    
     <arg name="est" default="ekf2"/>
-    <arg name="base_vehicle" default="iris"/>
-    <arg name="vehicle" default="iris_2d_lidar"/>
-    <arg name="rcS" default="$(find px4)/posix-configs/SITL/init/$(arg est)/$(arg base_vehicle)"/>
-    <arg name="interactive" default="true"/>
-    <env name="PX4_SIM_MODEL" value="$(arg vehicle)" />
+    <arg name="vehicle" default="iris"/>
+    <env name="PX4_SIM_MODEL" value="gazebo-classic_$(arg vehicle)" />
     <env name="PX4_ESTIMATOR" value="$(arg est)" />
-    <!-- PX4 SITL and Gazebo -->
+    <arg name="interactive" default="true"/>
     <arg unless="$(arg interactive)" name="px4_command_arg1" value="-d"/>
     <arg     if="$(arg interactive)" name="px4_command_arg1" value=""/>
     <node name="sitl" pkg="px4" type="px4" output="screen"
-        args="$(find px4) $(arg rcS) $(arg px4_command_arg1)" required="true"/>
+        args="$(find px4)/build/px4_sitl_default/etc -s etc/init.d-posix/rcS $(arg px4_command_arg1)" required="true"/>
+
+
+
+
+
 
     <!-- Launching gazebo -->
     <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/empty.world"/>
@@ -64,7 +66,7 @@
     <arg name="R" default="0"/>
     <arg name="P" default="0"/>
     <arg name="Y" default="0"/>
-    <node name="$(anon vehicle_spawn)" pkg="gazebo_ros" type="spawn_model" output="screen" args="-param robot_description_sitl -urdf -model $(arg vehicle) -package_to_model -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg R) -P $(arg P) -Y $(arg Y)"/>
+    <node name="$(anon vehicle_spawn)" pkg="gazebo_ros" type="spawn_model" output="screen" args="-param robot_description_sitl -urdf -model iris -package_to_model -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg R) -P $(arg P) -Y $(arg Y)"/>
 
     <!-- static tf from map to world which is base frame for planning -->
     <node pkg="tf" name="map2world" type="static_transform_publisher" args="0 0 0 0 0 0 map world 100"/>

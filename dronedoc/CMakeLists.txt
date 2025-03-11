@@ -24,7 +24,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 find_package(yaml-cpp REQUIRED)
 find_package(Protobuf REQUIRED)
-find_package(OMPL REQUIRED)
+find_package(ompl REQUIRED)
 
 find_package(gazebo REQUIRED)
 if("${GAZEBO_VERSION}" VERSION_LESS "7.4")
@@ -69,19 +69,19 @@ link_directories(${GAZEBO_LIBRARY_DIRS} ${CMAKE_CURRENT_BINARY_DIR}/msgs/proto)
 add_subdirectory(msgs/proto)
 
 # Build map builder and request publisher
-add_executable (request_publisher src/gazebo/request_publisher.cpp)
-target_link_libraries(request_publisher dronedoc ${GAZEBO_LIBRARIES}
-                                                 ${Boost_LIBRARIES}
-                                                 ${SDF_LIBRARIES}
-                                                 ${catkin_LIBRARIES})
-add_dependencies(request_publisher dronedoc)
-add_library(map_builder SHARED src/gazebo/map_builder.cpp)
-target_link_libraries(map_builder dronedoc ${Boost_LIBRARIES}
-                                           ${GAZEBO_LIBRARIES}
-                                           ${SDF_LIBRARIES}
-                                           ${YAML_CPP_LIBRARIES}
-                                           ${catkin_LIBRARIES})
-add_dependencies(map_builder dronedoc)
+# add_executable (request_publisher src/gazebo/request_publisher.cpp)
+# target_link_libraries(request_publisher dronedoc ${GAZEBO_LIBRARIES}
+#                                                  ${Boost_LIBRARIES}
+#                                                  ${SDF_LIBRARIES}
+#                                                  ${catkin_LIBRARIES})
+# add_dependencies(request_publisher dronedoc)
+# add_library(map_builder SHARED src/gazebo/map_builder.cpp)
+# target_link_libraries(map_builder dronedoc ${Boost_LIBRARIES}
+#                                            ${GAZEBO_LIBRARIES}
+#                                            ${SDF_LIBRARIES}
+#                                            ${YAML_CPP_LIBRARIES}
+#                                            ${catkin_LIBRARIES})
+# add_dependencies(map_builder dronedoc)
 
 # Build moveit library
 add_library(${PROJECT_NAME}_moveit_multi_dof_controller_manager src/moveit_multi_dof_controller_manager.cpp)
