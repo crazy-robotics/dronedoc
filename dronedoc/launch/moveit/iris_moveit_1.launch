@@ -58,11 +58,11 @@
     <arg name="fcu_url" default="udp://:14540@127.0.0.1:14540"/>
     <arg name="gcs_url" default="" />
     <arg name="respawn_mavros" default="false" />
-    <!-- <include file="$(find mavros)/launch/px4.launch">
+    <include file="$(find mavros)/launch/px4.launch">
         <arg name="gcs_url" value=""/>
         <arg name="fcu_url" value="$(arg fcu_url)"/>
         <arg name="respawn_mavros" value="$(arg respawn_mavros)"/>
-    </include> -->
+    </include>
 
     <!-- mavros -->
     <param name="/mavros/local_position/tf/send" type="bool" value="true" />
