@@ -11,7 +11,7 @@
   <xacro:arg name='serial_device' default='/dev/ttyACM0' />
   <xacro:arg name='baudrate' default='921600' />
   <xacro:arg name='qgc_addr' default='INADDR_ANY' />
-  <xacro:arg name='qgc_udp_port' default='14550' />
+  <xacro:arg name='qgc_udp_port' default='14570' />
   <xacro:arg name='hil_mode' default='false' />
   <xacro:arg name='hil_state_level' default='false' />
   <xacro:arg name='send_vision_estimation' default='false' />

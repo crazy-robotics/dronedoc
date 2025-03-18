@@ -6,6 +6,7 @@
     <arg name="verbose" default="false"/>
     <arg name="paused" default="false"/>
     <arg name="respawn_gazebo" default="false"/>
+    <arg name="px4_start_delay" default="20"/>
 
     <!-- robot description for px4 sitl -->
     <arg name="model_sitl" default="$(find dronedoc)/models/iris_depth_camera/xacro_sitl/urdf/iris_base.xacro" />
@@ -70,16 +71,9 @@
     <param name="/mavros/local_position/tf/frame_id" type="str" value="map" />
 
     <!-- static tf from map to world which is base frame for planning -->
-    <node pkg="tf" name="map2world" type="static_transform_publisher" args="0 0 0 0 0 0 map world 100"/>
-    <!-- publish tf to supress warnings -->
+    <!-- <node pkg="tf" name="map2world" type="static_transform_publisher" args="0 0 0 0 0 0 map world 100"/>
     <node pkg="tf" name="map2origin" type="static_transform_publisher" args="0 0 0 0 0 0 map local_origin 100"/>
     <node pkg="tf" name="base2fcu" type="static_transform_publisher" args="0 0 0 0 0 0 base_link fcu 100"/>
-
-    <!-- Moveit -->
-    <include file="$(find iris_moveit_config)/launch/move_group.launch" >
-        <arg name="fake_execution" value="false" />
-    </include>
-
-    <node pkg="dronedoc" name="drone_controller" type="drone_controller" output="screen"/>
+ -->
 
 </launch>

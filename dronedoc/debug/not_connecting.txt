@@ -1,0 +1,250 @@
+
+
+setting /run_id to b0816bc4-02f4-11f0-a555-e3b56fe9d41c
+process[rosout-1]: started with pid [18846]
+started core service [/rosout]
+process[joint_state_publisher-2]: started with pid [18854]
+process[robot_state_publisher-3]: started with pid [18855]
+process[sitl-4]: started with pid [18862]
+
+______  __   __    ___ 
+| ___ \ \ \ / /   /   |
+| |_/ /  \ V /   / /| |
+|  __/   /   \  / /_| |
+| |     / /^\ \ \___  |
+\_|     \/   \/     |_/
+
+px4 starting.
+
+INFO  [px4] startup script: /bin/sh etc/init.d-posix/rcS 0
+process[gazebo-5]: started with pid [18875]
+INFO  [init] found model autostart file as SYS_AUTOSTART=10015
+INFO  [param] selected parameter default file parameters.bson
+INFO  [param] importing from 'parameters.bson'
+INFO  [parameters] BSON document size 392 bytes, decoded 392 bytes (INT32:17, FLOAT:3)
+process[gazebo_gui-6]: started with pid [18887]
+INFO  [param] selected parameter backup file parameters_backup.bson
+process[vehicle_spawn_mubashir_18816_318798600135366301-7]: started with pid [18898]
+process[mavros-8]: started with pid [18905]
+process[map2world-9]: started with pid [18909]
+process[map2origin-10]: started with pid [18916]
+process[base2fcu-11]: started with pid [18922]
+process[move_group-12]: started with pid [18931]
+process[drone_controller-13]: started with pid [18944]
+[ INFO] [1742191042.022245404]: Action server initialized.
+[ WARN] [1742191042.036194071]: Falling back to using the move_group node's namespace (deprecated Melodic behavior).
+[ INFO] [1742191042.045669801]: FCU URL: udp://:14540@127.0.0.1:14540
+INFO  [dataman] data manager file './dataman' size is 7872608 bytes
+[ INFO] [1742191042.050099978]: udp0: Bind address: 0.0.0.0:14540
+[ INFO] [1742191042.050229490]: udp0: Remote address: 127.0.0.1:14540
+[ INFO] [1742191042.050349862]: GCS bridge disabled
+[ INFO] [1742191042.058865306]: Loading robot model 'iris'...
+[ WARN] [1742191042.059416927]: Link camera_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
+[ INFO] [1742191042.073403143]: Plugin 3dr_radio loaded
+[ INFO] [1742191042.075945802]: Plugin 3dr_radio initialized
+[ INFO] [1742191042.076169497]: Plugin actuator_control loaded
+[ INFO] [1742191042.083070943]: Plugin actuator_control initialized
+[ INFO] [1742191042.091007739]: Plugin adsb loaded
+INFO  [init] PX4_SIM_HOSTNAME: localhost
+INFO  [simulator_mavlink] Waiting for simulator to accept connection on TCP port 4560
+[ INFO] [1742191042.099437278]: Plugin adsb initialized
+[ INFO] [1742191042.099625099]: Plugin altitude loaded
+[ INFO] [1742191042.102832233]: Plugin altitude initialized
+[ INFO] [1742191042.103115377]: Plugin cam_imu_sync loaded
+[ INFO] [1742191042.104497820]: Plugin cam_imu_sync initialized
+[ INFO] [1742191042.104739110]: Plugin camera loaded
+[ INFO] [1742191042.105477402]: Plugin camera initialized
+[ INFO] [1742191042.105614294]: Plugin cellular_status loaded
+[ INFO] [1742191042.108137363]: Plugin cellular_status initialized
+[ INFO] [1742191042.108450049]: Plugin command loaded
+[ INFO] [1742191042.123387423]: Plugin command initialized
+[ INFO] [1742191042.123821012]: Plugin companion_process_status loaded
+[ INFO] [1742191042.130479877]: Plugin companion_process_status initialized
+[ INFO] [1742191042.130656574]: Plugin debug_value loaded
+[ INFO] [1742191042.139520170]: Plugin debug_value initialized
+[ INFO] [1742191042.139612007]: Plugin distance_sensor blacklisted
+[ INFO] [1742191042.139766440]: Plugin esc_status loaded
+[ INFO] [1742191042.141452328]: Plugin esc_status initialized
+[ INFO] [1742191042.141631970]: Plugin esc_telemetry loaded
+[ INFO] [1742191042.143897579]: Plugin esc_telemetry initialized
+[ INFO] [1742191042.144263453]: Plugin fake_gps loaded
+[ INFO] [1742191042.176127719]: Plugin fake_gps initialized
+[ INFO] [1742191042.176294876]: Plugin ftp loaded
+[ INFO] [1742191042.186584611]: Plugin ftp initialized
+[ INFO] [1742191042.186913887]: Plugin geofence loaded
+[ INFO] [1742191042.192698779]: Plugin geofence initialized
+[ INFO] [1742191042.192991813]: Plugin global_position loaded
+[ WARN] [1742191042.198801857]: No kinematics plugins defined. Fill and load kinematics.yaml!
+[ INFO] [1742191042.274282210]: Plugin global_position initialized
+[ INFO] [1742191042.274515610]: Plugin gps_input loaded
+[ INFO] [1742191042.279847677]: Publishing maintained planning scene on 'monitored_planning_scene'
+[ INFO] [1742191042.283391772]: Plugin gps_input initialized
+[ INFO] [1742191042.283591632]: Plugin gps_rtk loaded
+[ INFO] [1742191042.294414758]: Plugin gps_rtk initialized
+[ INFO] [1742191042.294664858]: Plugin gps_status loaded
+[ INFO] [1742191042.295948715]: Listening to 'joint_states' for joint states
+[ INFO] [1742191042.303499290]: Plugin gps_status initialized
+[ INFO] [1742191042.303702494]: Plugin guided_target loaded
+[ INFO] [1742191042.313110507]: Listening to '/attached_collision_object' for attached collision objects
+[ INFO] [1742191042.313182694]: Starting planning scene monitor
+[ INFO] [1742191042.317551369]: Plugin guided_target initialized
+[ INFO] [1742191042.317777953]: Plugin hil loaded
+[ INFO] [1742191042.321226751]: Listening to '/planning_scene'
+[ INFO] [1742191042.321371447]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[ INFO] [1742191042.330971831]: Listening to '/collision_object'
+[ INFO] [1742191042.338932411]: Listening to '/planning_scene_world' for planning scene world geometry
+[ INFO] [1742191042.361948622]: Plugin hil initialized
+[ INFO] [1742191042.362349170]: Plugin home_position loaded
+[ INFO] [1742191042.372046717]: Plugin home_position initialized
+[ INFO] [1742191042.372335321]: Plugin imu loaded
+[ INFO] [1742191042.383982414]: Listening to '/camera/depth/points' using message filter with target frame 'world '
+[ INFO] [1742191042.384063934]: Loading planning pipeline ''
+[ INFO] [1742191042.392118679]: Plugin imu initialized
+[ INFO] [1742191042.392445997]: Plugin landing_target loaded
+[ INFO] [1742191042.423755075]: Plugin landing_target initialized
+[ INFO] [1742191042.424181802]: Plugin local_position loaded
+[ INFO] [1742191042.437251844]: Plugin local_position initialized
+[ INFO] [1742191042.437530703]: Plugin log_transfer loaded
+[ INFO] [1742191042.443295168]: Plugin log_transfer initialized
+[ INFO] [1742191042.443535467]: Plugin mag_calibration_status loaded
+[ INFO] [1742191042.447130108]: Plugin mag_calibration_status initialized
+[ INFO] [1742191042.447599855]: Plugin manual_control loaded
+[ INFO] [1742191042.463585276]: Plugin manual_control initialized
+[ INFO] [1742191042.463984464]: Plugin mocap_pose_estimate loaded
+[ INFO] [1742191042.477396977]: Plugin mocap_pose_estimate initialized
+[ INFO] [1742191042.477736171]: Plugin mount_control loaded
+[ WARN] [1742191042.497228273]: Could not retrive negate_measured_roll parameter value, using default (0)
+[ WARN] [1742191042.498727291]: Could not retrive negate_measured_pitch parameter value, using default (0)
+[ WARN] [1742191042.499576147]: Could not retrive negate_measured_yaw parameter value, using default (0)
+[ WARN] [1742191042.504553197]: Could not retrive debounce_s parameter value, using default (4.000000)
+[ WARN] [1742191042.505908388]: Could not retrive err_threshold_deg parameter value, using default (10.000000)
+[ INFO] [1742191042.506065620]: Plugin mount_control initialized
+[ INFO] [1742191042.506378447]: Plugin nav_controller_output loaded
+[ INFO] [1742191042.509577185]: Plugin nav_controller_output initialized
+[ INFO] [1742191042.510049535]: Plugin obstacle_distance loaded
+[ INFO] [1742191042.514047653]: Using planning interface 'OMPL'
+[ INFO] [1742191042.517160023]: Plugin obstacle_distance initialized
+[ INFO] [1742191042.517510620]: Plugin odom loaded
+[ INFO] [1742191042.520086524]: Param 'default_workspace_bounds' was not set. Using default value: 10
+[ INFO] [1742191042.521646240]: Param 'start_state_max_bounds_error' was set to 0.1
+[ INFO] [1742191042.529931077]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1742191042.531123055]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1742191042.531379325]: Plugin odom initialized
+[ INFO] [1742191042.531623533]: Plugin onboard_computer_status loaded
+[ INFO] [1742191042.532020517]: Param 'jiggle_fraction' was set to 0.05
+[ INFO] [1742191042.533263703]: Param 'max_sampling_attempts' was not set. Using default value: 100
+[ INFO] [1742191042.533329743]: Using planning request adapter 'Add Time Parameterization'
+[ INFO] [1742191042.533359603]: Using planning request adapter 'Fix Workspace Bounds'
+[ INFO] [1742191042.533383667]: Using planning request adapter 'Fix Start State Bounds'
+[ INFO] [1742191042.533408095]: Using planning request adapter 'Fix Start State In Collision'
+[ INFO] [1742191042.533442387]: Using planning request adapter 'Fix Start State Path Constraints'
+[ INFO] [1742191042.540743229]: Plugin onboard_computer_status initialized
+[ INFO] [1742191042.541076759]: Plugin param loaded
+[ INFO] [1742191042.548023268]: Plugin param initialized
+[ INFO] [1742191042.548250145]: Plugin play_tune loaded
+[ INFO] [1742191042.554290618]: Plugin play_tune initialized
+[ INFO] [1742191042.554612423]: Plugin px4flow loaded
+[ INFO] [1742191042.562927475]: Plugin px4flow initialized
+[ INFO] [1742191042.563187599]: Plugin rallypoint loaded
+[ INFO] [1742191042.567079141]: Plugin rallypoint initialized
+[ INFO] [1742191042.567187317]: Plugin rangefinder blacklisted
+[ INFO] [1742191042.567425512]: Plugin rc_io loaded
+[ INFO] [1742191042.572387829]: Plugin rc_io initialized
+[ INFO] [1742191042.572526589]: Plugin safety_area blacklisted
+[ INFO] [1742191042.572840189]: Plugin setpoint_accel loaded
+[ INFO] [1742191042.579754351]: Plugin setpoint_accel initialized
+[ INFO] [1742191042.580122316]: Plugin setpoint_attitude loaded
+[ INFO] [1742191042.601526380]: Plugin setpoint_attitude initialized
+[ INFO] [1742191042.601708099]: Plugin setpoint_position loaded
+[ INFO] [1742191042.643068418]: Plugin setpoint_position initialized
+[ INFO] [1742191042.643492888]: Plugin setpoint_raw loaded
+[INFO] [1742191042.666892, 0.000000]: Loading model XML from ros parameter robot_description_sitl
+[ INFO] [1742191042.673669782]: Plugin setpoint_raw initialized
+[ INFO] [1742191042.674032444]: Plugin setpoint_trajectory loaded
+[ INFO] [1742191042.680700042]: Plugin setpoint_trajectory initialized
+[ INFO] [1742191042.680965954]: Plugin setpoint_velocity loaded
+[INFO] [1742191042.684773, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
+[ INFO] [1742191042.687452326]: Plugin setpoint_velocity initialized
+[ INFO] [1742191042.687754690]: Plugin sys_status loaded
+[ INFO] [1742191042.715755744]: Plugin sys_status initialized
+[ INFO] [1742191042.715975591]: Plugin sys_time loaded
+[ INFO] [1742191042.731834553]: TM: Timesync mode: MAVLINK
+[ INFO] [1742191042.732989303]: TM: Not publishing sim time
+[ INFO] [1742191042.736301585]: Plugin sys_time initialized
+[ INFO] [1742191042.736735003]: Plugin terrain loaded
+[ INFO] [1742191042.738402433]: Plugin terrain initialized
+[ INFO] [1742191042.738877108]: Plugin trajectory loaded
+[ INFO] [1742191042.751962226]: Plugin trajectory initialized
+[ INFO] [1742191042.752255871]: Plugin tunnel loaded
+[ INFO] [1742191042.759017544]: Plugin tunnel initialized
+[ INFO] [1742191042.759314609]: Plugin vfr_hud loaded
+[ INFO] [1742191042.761144038]: Plugin vfr_hud initialized
+[ INFO] [1742191042.761257837]: Plugin vibration blacklisted
+[ INFO] [1742191042.761515900]: Plugin vision_pose_estimate loaded
+[ INFO] [1742191042.778729619]: Plugin vision_pose_estimate initialized
+[ INFO] [1742191042.779150213]: Plugin vision_speed_estimate loaded
+[ INFO] [1742191042.787407299]: Plugin vision_speed_estimate initialized
+[ INFO] [1742191042.787778380]: Plugin waypoint loaded
+[ INFO] [1742191042.803363226]: Plugin waypoint initialized
+[ INFO] [1742191042.803527886]: Plugin wheel_odometry blacklisted
+[ INFO] [1742191042.803839036]: Plugin wind_estimation loaded
+[ INFO] [1742191042.806270260]: Plugin wind_estimation initialized
+[ INFO] [1742191042.806832972]: Built-in SIMD instructions: SSE, SSE2
+[ INFO] [1742191042.806933738]: Built-in MAVLink package version: 2024.10.10
+[ INFO] [1742191042.807021612]: Known MAVLink dialects: common ardupilotmega ASLUAV AVSSUAS all csAirLink cubepilot development icarous matrixpilot paparazzi standard storm32 uAvionix ualberta
+[ INFO] [1742191042.807105468]: MAVROS started. MY ID 1.240, TARGET ID 1.1
+[ INFO] [1742191042.836872941]: udp0: Remote address: 127.0.0.1:14540
+[ INFO] [1742191043.011565214]: Finished loading Gazebo ROS API Plugin.
+[ INFO] [1742191043.014056694]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...
+[ INFO] [1742191043.152830793]: Finished loading Gazebo ROS API Plugin.
+[ INFO] [1742191043.155981629]: waitForService: Service [/gazebo_gui/set_physics_properties] has not been advertised, waiting...
+[ INFO] [1742191043.880017905]: waitForService: Service [/gazebo/set_physics_properties] is now available.
+[INFO] [1742191043.900185, 0.000000]: Calling service /gazebo/spawn_urdf_model
+[ INFO] [1742191043.918549967, 0.040000000]: Physics dynamic reconfigure ready.
+[INFO] [1742191044.253708, 0.148000]: Spawn status: SpawnModel: Successfully spawned entity
+[vehicle_spawn_mubashir_18816_318798600135366301-7] process has finished cleanly
+log file: /home/mubashir/.ros/log/b0816bc4-02f4-11f0-a555-e3b56fe9d41c/vehicle_spawn_mubashir_18816_318798600135366301-7*.log
+[ INFO] [1742191045.758249030, 0.148000000]: Camera Plugin: Using the 'robotNamespace' param: '/'
+[ INFO] [1742191045.763165505, 0.148000000]: Camera Plugin (ns = /)  <tf_prefix_>, set to ""
+[ WARN] [1742191045.971738112, 0.156000000]: TM : RTT too high for timesync: 156.00 ms.
+[ WARN] [1742191045.972177520, 0.160000000]: TM : RTT too high for timesync: 160.00 ms.
+[ WARN] [1742191045.972353246, 0.160000000]: TM : RTT too high for timesync: 160.00 ms.
+[ WARN] [1742191045.972450933, 0.160000000]: TM : RTT too high for timesync: 160.00 ms.
+[ WARN] [1742191045.972548415, 0.160000000]: TM : RTT too high for timesync: 160.00 ms.
+[ WARN] [1742191045.974125887, 0.160000000]: Unable to update multi-DOF joint 'virtual_joint': Failure to lookup transform between 'world' and 'base_link' with TF exception: "world" passed to lookupTransform argument target_frame does not exist. 
+[ INFO] [1742191046.256359978, 0.408000000]: Added FollowJointTrajectory controller for iris_group_controller
+[ INFO] [1742191046.272893059, 0.428000000]: Trajectory execution is managing controllers
+[ INFO] [1742191046.273051080, 0.428000000]: MoveGroup debug mode is OFF
+Loading 'move_group/ApplyPlanningSceneService'...
+Loading 'move_group/ClearOctomapService'...
+Loading 'move_group/MoveGroupCartesianPathService'...
+Loading 'move_group/MoveGroupExecuteTrajectoryAction'...
+Loading 'move_group/MoveGroupGetPlanningSceneService'...
+Loading 'move_group/MoveGroupKinematicsService'...
+Loading 'move_group/MoveGroupMoveAction'...
+Loading 'move_group/MoveGroupPickPlaceAction'...
+Loading 'move_group/MoveGroupPlanService'...
+Loading 'move_group/MoveGroupQueryPlannersService'...
+Loading 'move_group/MoveGroupStateValidationService'...
+[ INFO] [1742191046.444449315, 0.588000000]: 
+
+********************************************************
+* MoveGroup using: 
+*     - ApplyPlanningSceneService
+*     - ClearOctomapService
+*     - CartesianPathService
+*     - ExecuteTrajectoryAction
+*     - GetPlanningSceneService
+*     - KinematicsService
+*     - MoveAction
+*     - PickPlaceAction
+*     - MotionPlanService
+*     - QueryPlannersService
+*     - StateValidationService
+********************************************************
+
+[ INFO] [1742191046.445579894, 0.588000000]: MoveGroup context using planning plugin ompl_interface/OMPLPlanner
+[ INFO] [1742191046.445701159, 0.588000000]: MoveGroup context initialization complete
+
+You can start planning now!
+
