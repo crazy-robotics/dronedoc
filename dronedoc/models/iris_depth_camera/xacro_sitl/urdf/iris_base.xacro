@@ -48,9 +48,19 @@
     <!-- Instantiate gps plugin. -->
   <xacro:gps_plugin_macro
     namespace="${namespace}"
-    gps_noise="true"
+    gps_noise="false"
     >
   </xacro:gps_plugin_macro>
+
+  <xacro:magnetometer_plugin_macro
+  namespace="${namespace}"
+  >
+  </xacro:magnetometer_plugin_macro>
+
+  <xacro:barometer_plugin_macro
+  namespace="${namespace}"
+  >
+  </xacro:barometer_plugin_macro>
 
   <xacro:if value="$(arg enable_mavlink_interface)">
   <!-- Instantiate mavlink telemetry interface. -->
